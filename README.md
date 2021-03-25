@@ -1,2 +1,3 @@
 # timer
-Projekt zaliczeniowy - Inżynieria oprogramowania
+QTCreator C++ desktop application
+
