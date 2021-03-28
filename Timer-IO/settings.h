@@ -14,9 +14,21 @@ class settings : public QDialog
 public:
     explicit settings(QWidget *parent = nullptr);
     ~settings();
-
+public slots:
+    void changeColorScheme(int color);
 private slots:
+
     void on_pushButton_3_clicked();
+
+    void on_pushButton_2_clicked();
+
+    void on_pushButton_5_clicked();
+
+    void on_pushButton_4_clicked();
+
+    void on_pushButton_5_pressed();
+
+    void on_pushButton_4_pressed();
 
 private:
     Ui::settings *ui;

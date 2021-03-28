@@ -1,7 +1,7 @@
 #ifndef TIMER_H
 #define TIMER_H
 #include <QMainWindow>
-
+#include <string>
 QT_BEGIN_NAMESPACE
 namespace Ui { class timer; }
 QT_END_NAMESPACE
@@ -15,6 +15,7 @@ public:
     ~timer();
 public slots:
     void tick();
+    void changeColorScheme(int color);
 private slots:
     void on_dial_sliderReleased();
 
@@ -31,6 +32,10 @@ private slots:
     void on_ok_clicked();
 
     void on_toolButton_clicked();
+
+    void on_toolButton_pressed();
+
+    void on_button_pressed();
 
 private:
     Ui::timer *ui;

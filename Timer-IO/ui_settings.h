@@ -22,14 +22,14 @@ QT_BEGIN_NAMESPACE
 class Ui_settings
 {
 public:
-    QFrame *settings_2;
-    QLabel *label_8;
-    QLabel *label_9;
-    QComboBox *comboBox;
-    QComboBox *comboBox_2;
-    QLabel *label_10;
-    QPushButton *pushButton_2;
-    QPushButton *pushButton_3;
+    QFrame *frame1;
+    QLabel *label_11;
+    QLabel *label_12;
+    QComboBox *dzwiekComboBox_2;
+    QComboBox *motywComboBox_2;
+    QLabel *label_13;
+    QPushButton *pushButton_4;
+    QPushButton *pushButton_5;
 
     void setupUi(QDialog *settings)
     {
@@ -110,50 +110,50 @@ public:
         palette.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush8);
 #endif
         settings->setPalette(palette);
-        settings_2 = new QFrame(settings);
-        settings_2->setObjectName(QString::fromUtf8("settings_2"));
-        settings_2->setGeometry(QRect(0, 0, 201, 191));
-        settings_2->setAutoFillBackground(true);
-        settings_2->setFrameShape(QFrame::StyledPanel);
-        settings_2->setFrameShadow(QFrame::Raised);
-        label_8 = new QLabel(settings_2);
-        label_8->setObjectName(QString::fromUtf8("label_8"));
-        label_8->setGeometry(QRect(10, 50, 51, 20));
+        frame1 = new QFrame(settings);
+        frame1->setObjectName(QString::fromUtf8("frame1"));
+        frame1->setGeometry(QRect(0, 0, 201, 191));
+        frame1->setAutoFillBackground(true);
+        frame1->setFrameShape(QFrame::StyledPanel);
+        frame1->setFrameShadow(QFrame::Raised);
+        label_11 = new QLabel(frame1);
+        label_11->setObjectName(QString::fromUtf8("label_11"));
+        label_11->setGeometry(QRect(10, 50, 51, 20));
         QFont font;
         font.setPointSize(9);
         font.setBold(true);
-        label_8->setFont(font);
-        label_9 = new QLabel(settings_2);
-        label_9->setObjectName(QString::fromUtf8("label_9"));
-        label_9->setGeometry(QRect(10, 80, 51, 20));
-        label_9->setFont(font);
-        comboBox = new QComboBox(settings_2);
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->addItem(QString());
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
-        comboBox->setGeometry(QRect(60, 50, 111, 22));
-        comboBox->setFont(font);
-        comboBox_2 = new QComboBox(settings_2);
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->addItem(QString());
-        comboBox_2->setObjectName(QString::fromUtf8("comboBox_2"));
-        comboBox_2->setGeometry(QRect(60, 80, 111, 22));
-        comboBox_2->setFont(font);
-        label_10 = new QLabel(settings_2);
-        label_10->setObjectName(QString::fromUtf8("label_10"));
-        label_10->setGeometry(QRect(40, 10, 111, 20));
+        label_11->setFont(font);
+        label_12 = new QLabel(frame1);
+        label_12->setObjectName(QString::fromUtf8("label_12"));
+        label_12->setGeometry(QRect(10, 80, 51, 20));
+        label_12->setFont(font);
+        dzwiekComboBox_2 = new QComboBox(frame1);
+        dzwiekComboBox_2->addItem(QString());
+        dzwiekComboBox_2->addItem(QString());
+        dzwiekComboBox_2->addItem(QString());
+        dzwiekComboBox_2->setObjectName(QString::fromUtf8("dzwiekComboBox_2"));
+        dzwiekComboBox_2->setGeometry(QRect(60, 50, 111, 22));
+        dzwiekComboBox_2->setFont(font);
+        motywComboBox_2 = new QComboBox(frame1);
+        motywComboBox_2->addItem(QString());
+        motywComboBox_2->addItem(QString());
+        motywComboBox_2->addItem(QString());
+        motywComboBox_2->setObjectName(QString::fromUtf8("motywComboBox_2"));
+        motywComboBox_2->setGeometry(QRect(60, 80, 111, 22));
+        motywComboBox_2->setFont(font);
+        label_13 = new QLabel(frame1);
+        label_13->setObjectName(QString::fromUtf8("label_13"));
+        label_13->setGeometry(QRect(40, 10, 111, 20));
         QFont font1;
         font1.setPointSize(12);
         font1.setBold(true);
-        label_10->setFont(font1);
-        pushButton_2 = new QPushButton(settings_2);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
-        pushButton_2->setGeometry(QRect(10, 130, 71, 22));
-        pushButton_3 = new QPushButton(settings_2);
-        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
-        pushButton_3->setGeometry(QRect(99, 130, 71, 22));
+        label_13->setFont(font1);
+        pushButton_4 = new QPushButton(frame1);
+        pushButton_4->setObjectName(QString::fromUtf8("pushButton_4"));
+        pushButton_4->setGeometry(QRect(10, 130, 71, 22));
+        pushButton_5 = new QPushButton(frame1);
+        pushButton_5->setObjectName(QString::fromUtf8("pushButton_5"));
+        pushButton_5->setGeometry(QRect(99, 130, 71, 22));
 
         retranslateUi(settings);
 
@@ -163,19 +163,19 @@ public:
     void retranslateUi(QDialog *settings)
     {
         settings->setWindowTitle(QCoreApplication::translate("settings", "Dialog", nullptr));
-        label_8->setText(QCoreApplication::translate("settings", "D\305\272wi\304\231k:", nullptr));
-        label_9->setText(QCoreApplication::translate("settings", "Motyw:", nullptr));
-        comboBox->setItemText(0, QCoreApplication::translate("settings", "Slow Morning", nullptr));
-        comboBox->setItemText(1, QCoreApplication::translate("settings", "Daybreak", nullptr));
-        comboBox->setItemText(2, QCoreApplication::translate("settings", "Easy Riser", nullptr));
+        label_11->setText(QCoreApplication::translate("settings", "D\305\272wi\304\231k:", nullptr));
+        label_12->setText(QCoreApplication::translate("settings", "Motyw:", nullptr));
+        dzwiekComboBox_2->setItemText(0, QCoreApplication::translate("settings", "Slow Morning", nullptr));
+        dzwiekComboBox_2->setItemText(1, QCoreApplication::translate("settings", "Daybreak", nullptr));
+        dzwiekComboBox_2->setItemText(2, QCoreApplication::translate("settings", "Easy Riser", nullptr));
 
-        comboBox_2->setItemText(0, QCoreApplication::translate("settings", "Jasny", nullptr));
-        comboBox_2->setItemText(1, QCoreApplication::translate("settings", "Ciemny", nullptr));
-        comboBox_2->setItemText(2, QCoreApplication::translate("settings", "Wysoki kontrast", nullptr));
+        motywComboBox_2->setItemText(0, QCoreApplication::translate("settings", "Domy\305\233lny", nullptr));
+        motywComboBox_2->setItemText(1, QCoreApplication::translate("settings", "Ciemny", nullptr));
+        motywComboBox_2->setItemText(2, QCoreApplication::translate("settings", "Wysoki kontrast", nullptr));
 
-        label_10->setText(QCoreApplication::translate("settings", "USTAWIENIA", nullptr));
-        pushButton_2->setText(QCoreApplication::translate("settings", "Zapisz", nullptr));
-        pushButton_3->setText(QCoreApplication::translate("settings", "Anuluj", nullptr));
+        label_13->setText(QCoreApplication::translate("settings", "USTAWIENIA", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("settings", "Zapisz", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("settings", "Anuluj", nullptr));
     } // retranslateUi
 
 };
