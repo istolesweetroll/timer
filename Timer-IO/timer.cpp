@@ -3,10 +3,23 @@
 #include "settings.h"
 #include <string>
 #include <iostream>
+#include <string>
+#include <unistd.h>
+#include <iostream>
 #include <unistd.h>
 #include <QTimer>
 #include <fstream>
+#include <QProcess>
+
+
 using namespace std;
+using std::cout; using std::cin;
+using std::endl; using std::string;
+
+
+
+string colorTheme;
+string sound;
 
 timer::timer(QWidget *parent)
     : QMainWindow(parent)
@@ -14,24 +27,29 @@ timer::timer(QWidget *parent)
 {
     ui->setupUi(this);
     ui ->frame2 -> setVisible(false);
+    setFixedSize(size());
 
     t = new QTimer(this);
     connect(t, &QTimer::timeout, this, &::timer::tick);
 
+    readFromFile();
+
+}
+
+string timer::readFromFile(){
     ifstream infile("settings.txt");
 
     if (infile.good())
     {
 
-      string motyw;
-      getline(infile, motyw);
-      cout << motyw << endl;
-      changeColorScheme(stoi(motyw));
+      getline(infile, colorTheme);
+      changeColorScheme(stoi(colorTheme));
+      getline(infile, sound);
+
     }
-
+string a = colorTheme + sound;
+return a;
 }
-
-
 
 timer::~timer()
 {
@@ -53,10 +71,8 @@ void timer::changeColorScheme(int color){
 
     }
 
-
-
-
 }
+
 int hours = 0;
 int minutes = 0;
 int seconds = 0;
@@ -68,10 +84,7 @@ void timer::tick(){
     QString a = QString::number(hours)+" : "+QString::number(minutes)+" : "+ QString::number(seconds);
     ui -> display -> setText(a);
 
-    if(minutes == ui->timeEdit->dateTime().time().minute() && seconds ==ui->timeEdit->dateTime().time().second()){
-    t -> stop();
 
-    }
     seconds++;
 
     if (seconds == 60) {
@@ -87,14 +100,37 @@ void timer::tick(){
 
     ui ->progressBar->setValue(ui->progressBar->value()+1);
 
+    if(minutes == ui->timeEdit->dateTime().time().minute() && seconds ==ui->timeEdit->dateTime().time().second()+1){
+    t -> stop();
+    ui ->stop->setVisible(false);
+    ui ->reset->setEnabled(true);
+    ui->pauseplay->setEnabled(false);
+
+string path;
+char resolved_path[PATH_MAX];
+       realpath(".", resolved_path);
+
+        std::string s;
+        s = "play ";
+        s += resolved_path;
+   switch(stoi(sound)) {
+      case 0:
+        path = s+"/SlowMorning.wav reverse trim 0 5 reverse";
+        system(path.c_str());
+        break;
+      case 1:
+        path = "/Daybreak.wav reverse trim 0 5 reverse";
+        system(path.c_str());
+        break;
+      case 2:
+        path ="/EarlyRiser.wav reverse trim 0 5 reverse";
+        system(path.c_str());
+        break;
+
+    }
+
+    }
 }
-
-void timer::on_pushButton_clicked()
-{
-t -> start(1000);
-
-}
-
 
 
 void timer::on_toolButton_pressed()
@@ -104,7 +140,34 @@ void timer::on_toolButton_pressed()
     s.exec();
 }
 
-void timer::on_button_pressed()
+void timer::on_button_clicked()
 {
      ui ->frame2 -> setVisible(true);
+}
+
+
+
+void timer::on_pauseplay_clicked()
+{
+    if(t->isActive()){
+        t ->stop();
+    }
+    else{
+    t -> start(1000);
+    }
+}
+
+void timer::on_stop_clicked()
+{
+    t -> stop();
+    ui->stop->setVisible(false);
+    ui->reset->setEnabled(true);
+    ui->display -> setText("0 : 0 : 0");
+    ui->progressBar->setValue(0);
+}
+
+void timer::on_reset_clicked()
+{
+    qApp->quit();
+    QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
 }

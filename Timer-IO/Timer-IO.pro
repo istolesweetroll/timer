@@ -1,4 +1,12 @@
 QT       += core gui
+QT += testlib
+QT += gui
+CONFIG += qt warn_on depend_includepath testcase
+
+TEMPLATE = app
+
+SOURCES +=
+
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 CONFIG += c++11
@@ -28,4 +36,7 @@ qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
-DISTFILES +=
+DISTFILES += \
+    Daybreak.wav \
+    EarlyRiser.wav \
+    SlowMorning.wav
