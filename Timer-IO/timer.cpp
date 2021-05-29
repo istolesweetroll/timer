@@ -48,6 +48,7 @@ string timer::readFromFile(){
     }
 
 else if(!infile)return "FILE MISSING";
+    else return "ERROR";
 }
 
 

@@ -61,6 +61,8 @@ void settings::writeToFile(){
    fs << ui->motywComboBox_2->currentIndex() << "\n";
    fs << ui->dzwiekComboBox_2->currentIndex() << "\n";
 }
+
+
 void settings::on_pushButton_4_pressed()
 {
 

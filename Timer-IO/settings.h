@@ -17,9 +17,9 @@ public:
 public slots:
     void changeColorScheme(int color);
     void writeToFile();
-    void writeTextToFile(string text);
     void deleteFile();
 private slots:
+
 
     void on_pushButton_5_pressed();
 
