@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'settings.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.8
+** Created by: Qt User Interface Compiler version 6.0.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -113,74 +113,6 @@ public:
         frame1 = new QFrame(settings);
         frame1->setObjectName(QString::fromUtf8("frame1"));
         frame1->setGeometry(QRect(0, 0, 201, 191));
-        QPalette palette1;
-        palette1.setBrush(QPalette::Active, QPalette::WindowText, brush);
-        QBrush brush9(QColor(245, 121, 0, 255));
-        brush9.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Button, brush9);
-        QBrush brush10(QColor(255, 183, 112, 255));
-        brush10.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Light, brush10);
-        QBrush brush11(QColor(250, 152, 56, 255));
-        brush11.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Midlight, brush11);
-        QBrush brush12(QColor(122, 60, 0, 255));
-        brush12.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Dark, brush12);
-        QBrush brush13(QColor(163, 81, 0, 255));
-        brush13.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::Mid, brush13);
-        palette1.setBrush(QPalette::Active, QPalette::Text, brush);
-        palette1.setBrush(QPalette::Active, QPalette::BrightText, brush6);
-        palette1.setBrush(QPalette::Active, QPalette::ButtonText, brush);
-        palette1.setBrush(QPalette::Active, QPalette::Base, brush6);
-        palette1.setBrush(QPalette::Active, QPalette::Window, brush9);
-        palette1.setBrush(QPalette::Active, QPalette::Shadow, brush);
-        QBrush brush14(QColor(250, 188, 127, 255));
-        brush14.setStyle(Qt::SolidPattern);
-        palette1.setBrush(QPalette::Active, QPalette::AlternateBase, brush14);
-        palette1.setBrush(QPalette::Active, QPalette::ToolTipBase, brush7);
-        palette1.setBrush(QPalette::Active, QPalette::ToolTipText, brush);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette1.setBrush(QPalette::Active, QPalette::PlaceholderText, brush8);
-#endif
-        palette1.setBrush(QPalette::Inactive, QPalette::WindowText, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::Button, brush9);
-        palette1.setBrush(QPalette::Inactive, QPalette::Light, brush10);
-        palette1.setBrush(QPalette::Inactive, QPalette::Midlight, brush11);
-        palette1.setBrush(QPalette::Inactive, QPalette::Dark, brush12);
-        palette1.setBrush(QPalette::Inactive, QPalette::Mid, brush13);
-        palette1.setBrush(QPalette::Inactive, QPalette::Text, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::BrightText, brush6);
-        palette1.setBrush(QPalette::Inactive, QPalette::ButtonText, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::Base, brush6);
-        palette1.setBrush(QPalette::Inactive, QPalette::Window, brush9);
-        palette1.setBrush(QPalette::Inactive, QPalette::Shadow, brush);
-        palette1.setBrush(QPalette::Inactive, QPalette::AlternateBase, brush14);
-        palette1.setBrush(QPalette::Inactive, QPalette::ToolTipBase, brush7);
-        palette1.setBrush(QPalette::Inactive, QPalette::ToolTipText, brush);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette1.setBrush(QPalette::Inactive, QPalette::PlaceholderText, brush8);
-#endif
-        palette1.setBrush(QPalette::Disabled, QPalette::WindowText, brush12);
-        palette1.setBrush(QPalette::Disabled, QPalette::Button, brush9);
-        palette1.setBrush(QPalette::Disabled, QPalette::Light, brush10);
-        palette1.setBrush(QPalette::Disabled, QPalette::Midlight, brush11);
-        palette1.setBrush(QPalette::Disabled, QPalette::Dark, brush12);
-        palette1.setBrush(QPalette::Disabled, QPalette::Mid, brush13);
-        palette1.setBrush(QPalette::Disabled, QPalette::Text, brush12);
-        palette1.setBrush(QPalette::Disabled, QPalette::BrightText, brush6);
-        palette1.setBrush(QPalette::Disabled, QPalette::ButtonText, brush12);
-        palette1.setBrush(QPalette::Disabled, QPalette::Base, brush9);
-        palette1.setBrush(QPalette::Disabled, QPalette::Window, brush9);
-        palette1.setBrush(QPalette::Disabled, QPalette::Shadow, brush);
-        palette1.setBrush(QPalette::Disabled, QPalette::AlternateBase, brush9);
-        palette1.setBrush(QPalette::Disabled, QPalette::ToolTipBase, brush7);
-        palette1.setBrush(QPalette::Disabled, QPalette::ToolTipText, brush);
-#if QT_VERSION >= QT_VERSION_CHECK(5, 12, 0)
-        palette1.setBrush(QPalette::Disabled, QPalette::PlaceholderText, brush8);
-#endif
-        frame1->setPalette(palette1);
         frame1->setAutoFillBackground(true);
         frame1->setFrameShape(QFrame::StyledPanel);
         frame1->setFrameShadow(QFrame::Raised);
@@ -211,7 +143,7 @@ public:
         motywComboBox_2->setFont(font);
         label_13 = new QLabel(frame1);
         label_13->setObjectName(QString::fromUtf8("label_13"));
-        label_13->setGeometry(QRect(40, 10, 131, 20));
+        label_13->setGeometry(QRect(40, 10, 111, 20));
         QFont font1;
         font1.setPointSize(12);
         font1.setBold(true);
@@ -230,20 +162,20 @@ public:
 
     void retranslateUi(QDialog *settings)
     {
-        settings->setWindowTitle(QApplication::translate("settings", "Dialog", nullptr));
-        label_11->setText(QApplication::translate("settings", "D\305\272wi\304\231k:", nullptr));
-        label_12->setText(QApplication::translate("settings", "Motyw:", nullptr));
-        dzwiekComboBox_2->setItemText(0, QApplication::translate("settings", "Slow Morning", nullptr));
-        dzwiekComboBox_2->setItemText(1, QApplication::translate("settings", "Daybreak", nullptr));
-        dzwiekComboBox_2->setItemText(2, QApplication::translate("settings", "Early Riser", nullptr));
+        settings->setWindowTitle(QCoreApplication::translate("settings", "Dialog", nullptr));
+        label_11->setText(QCoreApplication::translate("settings", "D\305\272wi\304\231k:", nullptr));
+        label_12->setText(QCoreApplication::translate("settings", "Motyw:", nullptr));
+        dzwiekComboBox_2->setItemText(0, QCoreApplication::translate("settings", "Slow Morning", nullptr));
+        dzwiekComboBox_2->setItemText(1, QCoreApplication::translate("settings", "Daybreak", nullptr));
+        dzwiekComboBox_2->setItemText(2, QCoreApplication::translate("settings", "Easy Riser", nullptr));
 
-        motywComboBox_2->setItemText(0, QApplication::translate("settings", "Domy\305\233lny", nullptr));
-        motywComboBox_2->setItemText(1, QApplication::translate("settings", "Ciemny", nullptr));
-        motywComboBox_2->setItemText(2, QApplication::translate("settings", "Wysoki kontrast", nullptr));
+        motywComboBox_2->setItemText(0, QCoreApplication::translate("settings", "Domy\305\233lny", nullptr));
+        motywComboBox_2->setItemText(1, QCoreApplication::translate("settings", "Ciemny", nullptr));
+        motywComboBox_2->setItemText(2, QCoreApplication::translate("settings", "Wysoki kontrast", nullptr));
 
-        label_13->setText(QApplication::translate("settings", "USTAWIENIA", nullptr));
-        pushButton_4->setText(QApplication::translate("settings", "Zapisz", nullptr));
-        pushButton_5->setText(QApplication::translate("settings", "Anuluj", nullptr));
+        label_13->setText(QCoreApplication::translate("settings", "USTAWIENIA", nullptr));
+        pushButton_4->setText(QCoreApplication::translate("settings", "Zapisz", nullptr));
+        pushButton_5->setText(QCoreApplication::translate("settings", "Anuluj", nullptr));
     } // retranslateUi
 
 };

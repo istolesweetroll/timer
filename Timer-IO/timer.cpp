@@ -16,8 +16,6 @@ using namespace std;
 using std::cout; using std::cin;
 using std::endl; using std::string;
 
-
-
 string colorTheme;
 string sound;
 
@@ -41,20 +39,17 @@ string timer::readFromFile(){
 
     if (infile.good())
     {
-
       getline(infile, colorTheme);
       changeColorScheme(stoi(colorTheme));
       getline(infile, sound);
+      string a = colorTheme + sound;
+      return a;
 
     }
-string a = colorTheme + sound;
-return a;
+
+else if(!infile)return "FILE MISSING";
 }
 
-timer::~timer()
-{
-    delete ui;
-}
 
 void timer::changeColorScheme(int color){
     if(color == 1){

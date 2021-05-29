@@ -1,4 +1,4 @@
-#include "timer.h"
+#include "timer.cpp"
 #include <QFile>
 #include <QApplication>
 

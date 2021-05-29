@@ -1,8 +1,8 @@
 #ifndef SETTINGS_H
 #define SETTINGS_H
-
+#include <string>
 #include <QDialog>
-
+using namespace std;
 namespace Ui {
 class settings;
 }
@@ -16,13 +16,16 @@ public:
     ~settings();
 public slots:
     void changeColorScheme(int color);
+    void writeToFile();
+    void writeTextToFile(string text);
+    void deleteFile();
 private slots:
 
     void on_pushButton_5_pressed();
 
     void on_pushButton_4_pressed();
 
-private:
+public:
     Ui::settings *ui;
 };
 

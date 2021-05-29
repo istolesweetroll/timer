@@ -13,13 +13,15 @@ class timer : public QMainWindow
 
 public:
     timer(QWidget *parent = nullptr);
-    ~timer();
+
 public slots:
-    void tick();
+
+
     string readFromFile();
     void changeColorScheme(int color);
 private slots:
 
+    void tick();
     void on_button_clicked();
 
     void on_toolButton_pressed();
@@ -30,8 +32,9 @@ private slots:
 
     void on_reset_clicked();
 
-private:
+public:
     Ui::timer *ui;
     QTimer *t;
 };
+
 #endif // TIMER_H

@@ -1,4 +1,5 @@
 #include "settings.h"
+#include "ui_timer.h"
 #include "timer.h"
 #include <fstream>
 #include "ui_settings.h"
@@ -20,11 +21,11 @@ settings::settings(QWidget *parent) :
 
 }
 
+
 settings::~settings()
 {
     delete ui;
 }
-
 void settings::changeColorScheme(int color){
     if(color == 1){
        ui->frame1->setStyleSheet("QFrame{ background-color: rgb(80,80,110) }");
@@ -50,14 +51,20 @@ void settings::on_pushButton_5_pressed()
 this->close();
 
 }
+void settings::deleteFile(){
+    remove("settings.txt");
+}
 
-void settings::on_pushButton_4_pressed()
-{
+void settings::writeToFile(){
     std::fstream fs;
    fs.open ("settings.txt", std::fstream::in | std::fstream::out | std::fstream::trunc);
-
    fs << ui->motywComboBox_2->currentIndex() << "\n";
    fs << ui->dzwiekComboBox_2->currentIndex() << "\n";
+}
+void settings::on_pushButton_4_pressed()
+{
+
+   writeToFile();
    qApp->quit();
    QProcess::startDetached(qApp->arguments()[0], qApp->arguments());
 }
